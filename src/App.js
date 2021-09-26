@@ -11,6 +11,7 @@ import Blog from './Blog';
 import Header from './Header';
 import Links from './Links'
 import About from './About'
+import Architecture from './Architecture'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
@@ -18,16 +19,12 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const sections = [
   { title: 'Home', url: '/home' },
   { title: 'Links', url: '/links' },
-  { title: 'About us', url: '/about' },
+  { title: 'Architecture Center', url: '/architectures' },
+  { title: 'About us', url: '/about' }
 ];
 
 const theme = createTheme();
 
-function Copyright() {
-  return (
-    <div>hihi</div>
-  );
-}
 
 export default function App() {
   return (
@@ -46,6 +43,9 @@ export default function App() {
           <Switch>
             <Route path="/links">
               <Links />
+            </Route>
+            <Route path="/architectures">
+              <Architecture />
             </Route>
             <Route path="/about">
               <About />
